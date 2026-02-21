@@ -119,10 +119,10 @@ export const SignalInterferenceBuffer: React.FC = () => {
                </div>
                
                <div className="space-y-3 font-mono text-[9px] text-zinc-600 transition-colors">
-                  <p className={state === 'COLLAPSE' ? 'text-rose-500' : ''}>> {state === 'CRYSTAL' ? 'SYNCING_OK' : 'LATENCY_SPIKE'}</p>
-                  <p>> 0x88.A_FETCHING...</p>
-                  <p className={state !== 'CRYSTAL' ? 'animate-pulse text-indigo-400' : ''}>> NOISE_LEVEL: {noise.toFixed(3)}</p>
-                  <p>> DECRYPTING_V14...</p>
+                  <p className={state === 'COLLAPSE' ? 'text-rose-500' : ''}> {state === 'CRYSTAL' ? 'SYNCING_OK' : 'LATENCY_SPIKE'}</p>
+                  <p> 0x88.A_FETCHING...</p>
+                  <p className={state !== 'CRYSTAL' ? 'animate-pulse text-indigo-400' : ''}> NOISE_LEVEL: {noise.toFixed(3)}</p>
+                  <p> DECRYPTING_V14...</p>
                </div>
 
                <div className="pt-6 border-t border-white/5">

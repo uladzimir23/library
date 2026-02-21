@@ -135,9 +135,9 @@ export const CommandCenter: React.FC = () => {
                      <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">Kernel_Logs</span>
                   </div>
                   <div className="flex-1 space-y-1 font-mono text-[8px] text-zinc-600 group-hover/term:text-indigo-400 transition-colors">
-                     <p>> INITIALIZING_SPATIAL_CORE... [OK]</p>
-                     <p>> ALLOCATING_VRAM_BUFFERS_... [OK]</p>
-                     <p className="animate-pulse">> WAITING_FOR_SYNC_PROTOCOL_</p>
+                     <p> INITIALIZING_SPATIAL_CORE... [OK]</p>
+                     <p> ALLOCATING_VRAM_BUFFERS_... [OK]</p>
+                     <p className="animate-pulse"> WAITING_FOR_SYNC_PROTOCOL_</p>
                   </div>
                </div>
 

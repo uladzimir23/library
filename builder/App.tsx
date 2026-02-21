@@ -590,7 +590,7 @@ export const BuilderApp: React.FC = () => {
                       <div className="space-y-6">
                          <h2 className="text-5xl font-tech font-bold text-text-main uppercase tracking-[0.4em]">{loadingText}</h2>
                          <div className="w-full bg-black/5 dark:bg-black/60 border border-black/10 dark:border-white/10 rounded-[48px] p-12 h-64 overflow-hidden font-mono text-[11px] text-left shadow-2xl text-indigo-400">
-                            {logs.map((log, i) => <div key={i} className="opacity-60 mb-2 whitespace-nowrap overflow-hidden text-ellipsis">> {log}</div>)}
+                            {logs.map((log, i) => <div key={i} className="opacity-60 mb-2 whitespace-nowrap overflow-hidden text-ellipsis"> {log}</div>)}
                          </div>
                       </div>
                    </div>

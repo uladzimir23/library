@@ -124,9 +124,9 @@ export const KineticSignalMainframe: React.FC = () => {
                <div className="text-right">
                   <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.5em] mb-2 font-black">Terminal_Output: 0x88.A</div>
                   <div className="font-mono text-[9px] text-indigo-400 opacity-40 leading-relaxed uppercase">
-                     >> ALLOCATING_BUFFERS_... [OK]<br />
-                     >> HANDSHAKE_PROTOCOL_... [READY]<br />
-                     >> KINETIC_FORCE_CALIB_... [DONE]
+                      ALLOCATING_BUFFERS_... [OK]<br />
+                      HANDSHAKE_PROTOCOL_... [READY]<br />
+                      KINETIC_FORCE_CALIB_... [DONE]
                   </div>
                </div>
             </div>

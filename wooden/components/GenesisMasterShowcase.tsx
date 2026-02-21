@@ -79,9 +79,9 @@ export const GenesisMasterShowcase: React.FC<{ theme: 'dark' | 'light' }> = ({ t
                 <span className="text-[10px] uppercase font-bold tracking-widest">Kernel_Access_Console</span>
              </div>
              <div className="text-[11px] text-zinc-500 space-y-1">
-                <p className="text-emerald-400/80">> INITIALIZING_ATOMIC_CORE... OK</p>
-                <p className="text-indigo-400/80">> MAPPING_Z_STACK_0x882... DONE</p>
-                <p className="animate-pulse">> AWAITING_COMMAND_INJECTION_</p>
+                <p className="text-emerald-400/80"> INITIALIZING_ATOMIC_CORE... OK</p>
+                <p className="text-indigo-400/80"> MAPPING_Z_STACK_0x882... DONE</p>
+                <p className="animate-pulse"> AWAITING_COMMAND_INJECTION_</p>
              </div>
           </div>
         );

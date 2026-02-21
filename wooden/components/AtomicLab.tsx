@@ -358,9 +358,9 @@ export const AtomicLab: React.FC<{ theme: string }> = ({ theme }) => {
                   <span className="text-[9px] font-black uppercase tracking-widest">Logic_Kernel</span>
                </div>
                <div className="font-mono text-[8px] text-zinc-600 space-y-1">
-                  <div>>> INIT_UNIT_{activeUnit}</div>
-                  <div>>> SYNC_HUE_{physics.hue}</div>
-                  <div className="text-indigo-500 animate-pulse">>> AWAITING_AI_CALIB_</div>
+                  <div> INIT_UNIT_{activeUnit}</div>
+                  <div> SYNC_HUE_{physics.hue}</div>
+                  <div className="text-indigo-500 animate-pulse"> AWAITING_AI_CALIB_</div>
                </div>
             </div>
          </div>

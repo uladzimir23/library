@@ -219,7 +219,7 @@ export const StateMorphStack: React.FC<{ theme: string }> = ({ theme }) => {
                <div className="space-y-2 font-mono text-[8px] text-zinc-600 uppercase">
                   <div>Bias: {systemState}</div>
                   <div>Sync: {coherence > 90 ? 'LOCKED' : 'CALIBRATING'}</div>
-                  <div className="text-indigo-500 animate-pulse">>> Listening for input...</div>
+                  <div className="text-indigo-500 animate-pulse"> Listening for input...</div>
                </div>
             </div>
          </div>

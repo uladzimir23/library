@@ -129,16 +129,16 @@ export const NeuralDebugger: React.FC = () => {
                   <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest font-bold">Deep_Debug_Stream</span>
                </div>
                <div className="flex-1 font-mono text-[9px] text-zinc-600 space-y-2 overflow-y-auto custom-scroll">
-                  <p className="opacity-40">> SYSTEM_INIT_... OK</p>
-                  <p className="opacity-60">> NODAL_MAP_SYNC_... DONE</p>
-                  <p className="text-emerald-500">> HANDSHAKE_ESTABLISHED</p>
+                  <p className="opacity-40"> SYSTEM_INIT_... OK</p>
+                  <p className="opacity-60"> NODAL_MAP_SYNC_... DONE</p>
+                  <p className="text-emerald-500"> HANDSHAKE_ESTABLISHED</p>
                   {activeNode !== null && (
                     <div className="pt-4 mt-4 border-t border-white/10 space-y-1 animate-in slide-in-from-bottom-2">
-                       <p className="text-indigo-400">>> INSPECTING: {nodes[activeNode].label}</p>
+                       <p className="text-indigo-400"> INSPECTING: {nodes[activeNode].label}</p>
                        <p className="text-zinc-500">VAL: 0x882_STABLE</p>
                     </div>
                   )}
-                  {isInterrupted && <p className="text-rose-500 animate-pulse">> KERNEL_PANIC: INTERRUPT_SEQ</p>}
+                  {isInterrupted && <p className="text-rose-500 animate-pulse"> KERNEL_PANIC: INTERRUPT_SEQ</p>}
                </div>
                <div className="mt-8 pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-zinc-700 uppercase tracking-widest">
                   <span>Slices: {bootSequence}%</span>
