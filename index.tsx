@@ -7,6 +7,7 @@ import SandboxApp from './sandbox/App';
 import { Hammer, Layers, Atom } from 'lucide-react';
 import { translations } from './translations';
 
+
 type Language = 'en' | 'ru';
 type Theme = 'dark' | 'light';
 type TranslationType = typeof translations['en'];

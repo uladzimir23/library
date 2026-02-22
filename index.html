@@ -1,125 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MatterForge · Spatial Design Studio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              tech: ['Rajdhani', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-            },
-            colors: {
-              surface: 'var(--bg-body)',
-              'text-main': 'var(--text-main)',
-              'text-muted': 'var(--text-muted)',
-              'panel': 'var(--panel-bg)',
-            },
-            animation: {
-              'spin-slow': 'spin 12s linear infinite',
-              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'shockwave': 'shockwave 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-            },
-            keyframes: {
-              shockwave: {
-                '0%': { transform: 'translate(-50%, -50%) scale(0)', opacity: '1', borderWidth: '4px' },
-                '100%': { transform: 'translate(-50%, -50%) scale(2)', opacity: '0', borderWidth: '0.5px' },
-              }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatterForge · Spatial Design Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            tech: ['Rajdhani', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            surface: 'var(--bg-body)',
+            'text-main': 'var(--text-main)',
+            'text-muted': 'var(--text-muted)',
+            'panel': 'var(--panel-bg)',
+          },
+          animation: {
+            'spin-slow': 'spin 12s linear infinite',
+            'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'shockwave': 'shockwave 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          },
+          keyframes: {
+            shockwave: {
+              '0%': { transform: 'translate(-50%, -50%) scale(0)', opacity: '1', borderWidth: '4px' },
+              '100%': { transform: 'translate(-50%, -50%) scale(2)', opacity: '0', borderWidth: '0.5px' },
             }
           }
-        },
-        safelist: [
-          'bg-indigo-500/10', 'bg-rose-500/10', 'bg-emerald-500/10', 'bg-zinc-500/10', 'bg-violet-500/10', 'bg-amber-500/10',
-          'text-indigo-500', 'text-rose-500', 'text-emerald-500', 'text-zinc-500', 'text-violet-500', 'text-amber-500',
-          'border-indigo-500/20', 'border-rose-500/20', 'border-emerald-500/20',
-          'dark:bg-white/5', 'dark:border-white/10', 'bg-white', 'border-black/5'
-        ]
-      }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-body: #fdfdfe;
-            --text-main: #09090b;
-            --text-muted: #52525b;
-            --glass-bg: rgba(255, 255, 255, 0.7);
-            --glass-border: rgba(0, 0, 0, 0.1);
-            --glow-opacity: 0.03;
-            --noise-opacity: 0.015;
-            --panel-bg: #f8f8fb;
-            --card-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
-            --bezier-ideal: cubic-bezier(0.16, 1, 0.3, 1);
         }
+      },
+      safelist: [
+        'bg-indigo-500/10', 'bg-rose-500/10', 'bg-emerald-500/10', 'bg-zinc-500/10', 'bg-violet-500/10', 'bg-amber-500/10',
+        'text-indigo-500', 'text-rose-500', 'text-emerald-500', 'text-zinc-500', 'text-violet-500', 'text-amber-500',
+        'border-indigo-500/20', 'border-rose-500/20', 'border-emerald-500/20',
+        'dark:bg-white/5', 'dark:border-white/10', 'bg-white', 'border-black/5'
+      ]
+    }
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg-body: #fdfdfe;
+      --text-main: #09090b;
+      --text-muted: #52525b;
+      --glass-bg: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(0, 0, 0, 0.1);
+      --glow-opacity: 0.03;
+      --noise-opacity: 0.015;
+      --panel-bg: #f8f8fb;
+      --card-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+      --bezier-ideal: cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-        .dark {
-            --bg-body: #030305;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --glow-opacity: 0.15;
-            --noise-opacity: 0.04;
-            --panel-bg: #0a0a0c;
-            --card-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
-        }
+    .dark {
+      --bg-body: #030305;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --glow-opacity: 0.15;
+      --noise-opacity: 0.04;
+      --panel-bg: #0a0a0c;
+      --card-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
 
-        html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            overflow-x: hidden;
-            transition: background-color 0.8s var(--bezier-ideal), color 0.4s ease;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      overflow-x: hidden;
+      transition: background-color 0.8s var(--bezier-ideal), color 0.4s ease;
+    }
 
-        .ambient-mesh {
-            position: fixed; inset: 0; z-index: -2;
-            background: 
-                radial-gradient(at 15% 25%, #818cf8, transparent 45%),
-                radial-gradient(at 85% 15%, #f472b6, transparent 45%),
-                radial-gradient(at 50% 85%, #2dd4bf, transparent 45%);
-            filter: blur(140px);
-            opacity: var(--glow-opacity);
-            pointer-events: none;
-            transition: opacity 0.8s ease;
-        }
+    .ambient-mesh {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(at 15% 25%, #818cf8, transparent 45%),
+        radial-gradient(at 85% 15%, #f472b6, transparent 45%),
+        radial-gradient(at 50% 85%, #2dd4bf, transparent 45%);
+      filter: blur(140px);
+      opacity: var(--glow-opacity);
+      pointer-events: none;
+      transition: opacity 0.8s ease;
+    }
 
-        .noise-texture {
-            position: fixed; inset: 0; z-index: 9999;
-            opacity: var(--noise-opacity); pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-        }
+    .noise-texture {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      opacity: var(--noise-opacity);
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
 
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(32px);
-            border: 1px solid var(--glass-border);
-            box-shadow: var(--card-shadow);
-        }
+    .glass-panel {
+      background: var(--glass-bg);
+      backdrop-filter: blur(32px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--card-shadow);
+    }
 
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        .perspective-2000 { perspective: 2000px; }
-        .preserve-3d { transform-style: preserve-3d; }
-        
-        .animate-shockwave {
-          animation: shockwave 1.2s var(--bezier-ideal) forwards;
-        }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
 
-        /* Плавные глобальные переходы */
-        * {
-          transition-timing-function: var(--bezier-ideal);
-        }
-    </style>
-<script type="importmap">
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .perspective-2000 {
+      perspective: 2000px;
+    }
+
+    .preserve-3d {
+      transform-style: preserve-3d;
+    }
+
+    .animate-shockwave {
+      animation: shockwave 1.2s var(--bezier-ideal) forwards;
+    }
+
+    /* Плавные глобальные переходы */
+    * {
+      transition-timing-function: var(--bezier-ideal);
+    }
+  </style>
+  <script type="importmap">
 {
   "imports": {
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
@@ -131,9 +151,12 @@
 }
 </script>
 </head>
+
 <body>
-    <div class="ambient-mesh"></div>
-    <div class="noise-texture"></div>
-    <div id="root"></div>
+  <div class="ambient-mesh"></div>
+  <div class="noise-texture"></div>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

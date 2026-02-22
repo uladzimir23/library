@@ -10,6 +10,7 @@ import { MechanicalBladeSwitcher } from './components/MechanicalBladeSwitcher';
 import { PressureVaultModal } from './components/PressureVaultModal';
 import { translations } from './translations';
 
+
 type Language = 'en' | 'ru';
 type TranslationType = typeof translations['en'];
 
